@@ -15,7 +15,7 @@
 
 		r : function check() {
 			var q = this.questions.length;
-			var answ, ul, li, p, chk, textElem ;
+			var answ, ul, li, p, chk, textElem, lb;
 			for (var i = 0; i < q; i++) {
 				p = document.createElement('p');
 				p.innerHTML = this.questions[i];
@@ -31,8 +31,10 @@
 						li.className = 'noneDecoration'
 						chk = document.createElement ('input');
 						chk.type = "checkbox";
-						ul.appendChild(li);
-						li.appendChild(chk);
+						lb = document.createElement('label');
+						ul.appendChild(lb);
+						lb.appendChild(li);
+						li.appendChild(chk)
 						textElem = document.createTextNode(this.answers[i][j]);
 						li.appendChild(textElem);
 
