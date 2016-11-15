@@ -28,7 +28,9 @@
 				for (var j = 0; j < answ; j++) {
 
 						li = document.createElement('li');
-						chk = document.createElement ('box');
+						li.className = 'noneDecoration'
+						chk = document.createElement ('input');
+						chk.type = "checkbox";
 						ul.appendChild(li);
 						li.appendChild(chk);
 						textElem = document.createTextNode(this.answers[i][j]);
